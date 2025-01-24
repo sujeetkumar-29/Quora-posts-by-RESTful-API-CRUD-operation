@@ -1,0 +1,24 @@
+{
+  "name": "quora-posts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sujeetkumar-29/Quora-posts.git"
+  },
+  "keywords": [],
+  "author": "sujeetkumar-29",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sujeetkumar-29/Quora-posts/issues"
+  },
+  "homepage": "https://github.com/sujeetkumar-29/Quora-posts#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
