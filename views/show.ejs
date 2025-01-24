@@ -1,30 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Show Post in detail</title>
-    <link rel="stylesheet" href="/style.css">  
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
     <style>
-        body{
-            margin:20px;
+        body {
+            margin: 0 20px 0 25px;
             padding: 20px;
-            gap:20px;
+            gap: 20px;
         }
-        .post{
+
+        .post {
             /* padding:20px; */
-            margin-top:20px;
-            width: 40%;
+            margin-top: 20px;
+            /* width: 40%; */
+        }
+
+        .edbtn {
+            display: flex;
+            justify-content: flex-start;
+            /* Align edit and delete side-by-side */
+            align-items: center;
+            gap: 10px;
+            /* Add spacing between the "edit" link and the "delete" button */
+            margin-top: 10px;
+        }
+
+        .edbtn a {
+            text-decoration: none;
+            /* Remove underline from the link */
+            font-size: 1em;
+            /* Standard readable font size */
+            color: #007BFF;
+            /* Blue color for the link */
+            padding: 8px 15px;
+            /* Add padding for a button-like appearance */
+            border: 1px solid #007BFF;
+            /* Add border matching the text color */
+            border-radius: 6px;
+            /* Rounded corners */
+            background-color: #ffffff;
+            /* White background */
+            transition: all 0.3s ease;
+            /* Smooth transitions for hover effects */
+        }
+
+        .edbtn a:hover {
+            color: #ffffff;
+            /* Change text color to white on hover */
+            background-color: #007BFF;
+            /* Blue background on hover */
+            border-color: #0056b3;
+            /* Darker border color on hover */
+        }
+
+        .edbtn form button {
+            font-size: 1em;
+            /* Match font size with the "edit" link */
+            color: #ffffff;
+            /* White text color */
+            background-color: #FF4136;
+            /* Red background for delete */
+            border: none;
+            /* Remove default border */
+            border-radius: 6px;
+            /* Rounded corners */
+            padding: 8px 15px;
+            /* Add padding for a button-like appearance */
+            cursor: pointer;
+            /* Pointer cursor for better UX */
+            transition: background-color 0.3s ease, transform 0.2s;
+            /* Smooth hover and click animations */
+        }
+
+        .edbtn form button:hover {
+            background-color: #e12d24;
+            /* Darker red on hover */
+            transform: translateY(-2px);
+            /* Slight lift effect on hover */
+        }
+
+        .edbtn form button:active {
+            background-color: #c7251b;
+            /* Even darker red when clicked */
+            transform: translateY(0);
+            /* Reset lift effect */
         }
     </style>
-    <h2>Here is post in detail.</h2>
-    <p>Post id:<%=post.id %></p>
-    <div class="post">
-        <h3 class="user">@<%=post.username %> </h3>
-        <h4 class="content"><%=post.content %></h4>
+    <div class="header">
 
+        <h1><a href="/posts">Qoura Posts</a></h1>
+
+        <!-- <a href="/posts/new">Add post</a> -->
+    </div>
+    <h2>Here is post in detail.</h2>
+    <p>Post id:<%=post.id %>
+    </p>
+    <div class="post">
+        <h3 class="user">@<%=post.username %>
+        </h3>
+        <h4 class="content">
+            <%=post.content %>
+        </h4>
+        <div class="edbtn">
+            <a href="/posts/<%=post.id%>/edit">Edit Post</a>
+            <form action="/posts/<%=post.id%>?_method=DELETE" method="post">
+                <button>Delete Post</button>
+            </form>
+        </div>
     </div>
 </body>
+
 </html>

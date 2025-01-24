@@ -27,6 +27,24 @@
     z-index: 10;
     border-bottom: 1px solid #ddd;
   }
+  h1 a{
+    text-decoration: none;
+    color: #e80d0d;
+
+  }
+ .apost{
+    text-decoration: none;
+    background-color: #007BFF; /* Primary blue color */
+  color: #ffffff; /* White text */
+  font-size: 1em; /* Standard font size */
+  font-weight: bold; /* Make the text stand out */
+  padding: 12px 20px; /* Add spacing inside the button */
+  border: none; /* Remove default border */
+  border-radius: 6px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor for better UX */
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
 
   /* Container for posts */
   .post-container {
@@ -69,6 +87,58 @@
     color: #555;
     word-wrap: break-word; /* Prevents overflow of long words */
   }
+
+  /* Container for posts */
+.post-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible grid layout */
+    gap: 20px;
+  }
+  
+  /* Each post card styling */
+  .post {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Required for positioning the "See in detail" link */
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Hide the "See in detail" link by default */
+  .see-detail {
+    display: none; /* Hidden initially */
+    position: absolute;
+    bottom: 15px; /* Position near the bottom of the post */
+    right: 15px; /* Align it to the right corner */
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .see-detail:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  /* Show the "See in detail" link on hover */
+  .post:hover .see-detail {
+    display: inline-block; /* Make it visible */
+  }
+  
+  
 
   /* Responsive design */
   @media (max-width: 768px) {

@@ -8,20 +8,15 @@
 </head>
 <body>
     <div class="header">
-
-        <h1>Qoura Posts</h1>
-        <a href="/posts/new">Add post</a>
+        <h1><a href="/posts">Qoura Posts</a></h1>
+        <a href="/posts/new" class="apost">Add post</a>
     </div>
   <div class="post-container">
     <% for (let post of posts) { %>
       <div class="post">
         <h3 class="user"> @<%= post.username %> </h3>
         <h4 class="content"> <%= post.content %> </h4>
-        <a href="/posts/<%=post.id%>">See in detail</a>
-        <a href="/posts/<%=post.id%>/edit">edit</a>
-        <form action="/posts/<%=post.id%>?_method=DELETE" method="post">
-            <button>Delete Post</button>
-        </form>
+        <a href="/posts/<%=post.id%>" class="see-detail">See in detail</a>
       </div>
     <% } %>
   </div>
