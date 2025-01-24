@@ -1,3 +1,75 @@
-h1{
-    color:#c92020;
-}
+  /* Reset and body styling */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+  }
+
+  /* Styling for the heading */
+  h1 {
+    font-size: 2.5em;
+    color: #e80d0d;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    background-color: #f9f9f9;
+    z-index: 10;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* Container for posts */
+  .post-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10px;
+    overflow: hidden;
+  }
+
+  /* Individual post styling */
+  .post {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  /* User and content styling */
+  .user {
+    margin: 0;
+    font-size: 1.4em;
+    color: #333;
+  }
+
+  .content {
+    margin: 10px 0 0;
+    font-size: 1.1em;
+    color: #555;
+    word-wrap: break-word; /* Prevents overflow of long words */
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .post-container {
+      grid-template-columns: 1fr;
+    }
+  }

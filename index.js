@@ -30,7 +30,47 @@ let posts=[
     {
       username: "foodie99",
       content: "Tried the new sushi place in town. Absolutely loved it! 🍣 #FoodieLife",
-    }
+    },
+    {
+      username: "john_doe",
+      content: "Excited to start my new job today! #NewBeginnings"
+    },
+    {
+      username: "jane_smith",
+      content: "Just baked the most delicious chocolate chip cookies 🍪✨"
+    },
+    {
+      username: "traveler42",
+      content: "Hiking in the Rockies was a breathtaking experience! 🏞️ #NatureLover"
+    },
+    {
+      username: "tech_guru",
+      content: "The new smartphone I reviewed today has some amazing features! 📱"
+    },
+    {
+      username: "foodie99",
+      content: "Tried the new sushi place in town. Absolutely loved it! 🍣 #FoodieLife",
+    },
+    {
+      username: "john_doe",
+      content: "Excited to start my new job today! #NewBeginnings"
+    },
+    {
+      username: "jane_smith",
+      content: "Just baked the most delicious chocolate chip cookies 🍪✨"
+    },
+    {
+      username: "traveler42",
+      content: "Hiking in the Rockies was a breathtaking experience! 🏞️ #NatureLover"
+    },
+    {
+      username: "tech_guru",
+      content: "The new smartphone I reviewed today has some amazing features! 📱"
+    },
+    {
+      username: "foodie99",
+      content: "Tried the new sushi place in town. Absolutely loved it! 🍣 #FoodieLife",
+    },
   ];
   
 app.get("/posts",(req,res)=>{
