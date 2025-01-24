@@ -9,14 +9,17 @@
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     line-height: 1.6;
+    
   }
 
   /* Styling for the heading */
-  h1 {
-    font-size: 2.5em;
+  .header {
+    /* font-size: 2.5em; */
+    display: flex;
+    justify-content: space-around;
     color: #e80d0d;
     text-align: center;
-    margin: 0;
+    /* margin:50px; */
     padding: 10px 0;
     position: sticky;
     top: 0;
@@ -72,4 +75,61 @@
     .post-container {
       grid-template-columns: 1fr;
     }
+  }
+
+
+  /* new.ejs styling */
+  .form-wrapper {
+    display: block;
+    max-width: 500px;
+    margin: 50px auto; /* Center the form horizontally */
+    padding: 20px;
+  }
+
+  .form-container {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-container input,
+  .form-container textarea,
+  .form-container button {
+    width: 100%;
+    font-size: 1em;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+  }
+
+  .form-container input:focus,
+  .form-container textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+  }
+
+  .form-container textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 100px;
+  }
+
+  .form-container button {
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .form-container button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+
+  .form-container button:active {
+    transform: translateY(0);
   }
