@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create new post</title>
     <link rel="stylesheet" href="/style.css">
 </head>
-
 <body>
     <style>
-        h3{
-            /* color: rgb(106, 123, 122); */
+        h3 {
             text-align: center;
             margin-top: 20px;
-
         }
-        .form-wrapper{
+        .form-wrapper {
             margin-top: 40px;
         }
     </style>
     <div class="header">
-
         <h1><a href="/posts">Qoura Posts</a></h1>
-
-        <!-- <a href="/posts/new">Add post</a> -->
     </div>
     <h3>Please add Post!</h3>
     <form action="/posts" method="post">
         <div class="form-wrapper">
-        <div class="form-container">
-            <input placeholder="username" name="username" class="adduser" required>
-            <textarea placeholder="content" name="content" class="addcontent" required></textarea>
-            <button class="addpost">Add Post</button>
-        </div></div>
+            <div class="form-container">
+                <input placeholder="username" name="username" class="adduser" required>
+                <textarea placeholder="content" name="content" class="addcontent" required></textarea>
+                <button class="addpost">Add Post</button>
+            </div>
+        </div>
     </form>
 </body>
-
 </html>

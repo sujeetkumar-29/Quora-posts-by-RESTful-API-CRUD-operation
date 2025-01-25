@@ -203,3 +203,116 @@
   .form-container button:active {
     transform: translateY(0);
   }
+
+  /* Styling for edit.ejs */
+  
+  .edit-container {
+    max-width: 600px;/* Restrict the width for better readability */
+    margin: 50px auto;/* Center align with top margin */
+    padding: 20px;
+    background: #ffffff; /* White background for contrast */          
+    border: 1px solid #ddd;/* Subtle border */           
+    border-radius: 8px;/* Rounded corners */           
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);/* Soft shadow for depth */           
+}
+
+.edit-container h2 {
+    font-size: 1.8em;/* Slightly larger heading */            
+    color: #333;/* Dark text for readability */            
+    margin-bottom: 10px;
+}
+
+.edit-container p,
+.edit-container h1 {
+    font-size: 1.2em;
+    color: #555;/* Slightly lighter text */            
+    margin-bottom: 15px;
+}
+
+.edit-container form textarea {
+    width: 100%;/* Full width of the container */           
+    padding: 10px;/* Add spacing inside the textarea */        
+    font-size: 1em;/* Standard font size */          
+    border: 1px solid #ddd;/* Light border */
+    border-radius: 6px;/* Rounded corners */           
+    resize: vertical;/* Allow vertical resizing only */           
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth focus effect */          
+}
+
+.edit-container form textarea:focus {
+    border-color: #007BFF;/* Highlight border in blue */           
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);/* Subtle blue shadow */            
+}
+
+.edit-container form button {
+    display: block;
+    width: 100%; /* Full-width button */           
+    padding: 12px;/* Add vertical and horizontal spacing */           
+    font-size: 1em;/* Standard font size */           
+    font-weight: bold;/* Emphasize the button text */           
+    color: #ffffff;/* White text */          
+    background-color: #007BFF;/* Blue background */          
+    border: none;/* Remove border */           
+    border-radius: 6px;/* Rounded corners */           
+    cursor: pointer;/* Pointer cursor for better UX */           
+    margin-top: 15px;/* Spacing above the button */           
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */        
+}
+
+.edit-container form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px);/* Slight lift effect */ 
+}
+
+.edit-container form button:active {
+    background-color: #004080;/* Even darker blue on click */        
+    transform: translateY(0);/* Reset lift effect */   
+}
+
+/* Styling for the show ejs */
+.edbtn {
+  display: flex;
+  justify-content: flex-start;/* Align edit and delete side-by-side */   
+  align-items: center;
+  gap: 10px;/* Add spacing between the "edit" link and the "delete" button */     
+  margin-top: 10px;
+}
+
+.edbtn a {
+  text-decoration: none;/* Remove underline from the link */       
+  font-size: 1em;/* Standard readable font size */     
+  color: #007BFF;/* Blue color for the link */   
+  padding: 8px 15px;/* Add padding for a button-like appearance */   
+  border: 1px solid #007BFF;/* Add border matching the text color */  
+  border-radius: 6px;/* Rounded corners */     
+  background-color: #ffffff; /* White background */
+  transition: all 0.3s ease;/* Smooth transitions for hover effects */   
+}
+
+.edbtn a:hover {
+  color: #ffffff;/* Change text color to white on hover */  
+  background-color: #007BFF; /* Blue background on hover */ 
+  border-color: #0056b3;/* Darker border color on hover */    
+}
+
+.edbtn form button {
+  font-size: 1em;/* Match font size with the "edit" link */     
+  color: #ffffff; /* White text color */
+  background-color: #FF4136;/* Red background for delete */
+  border: none;/* Remove default border */  
+  border-radius: 6px;/* Rounded corners */   
+  padding: 8px 15px;/* Add padding for a button-like appearance */
+  cursor: pointer;/* Pointer cursor for better UX */
+  transition: background-color 0.3s ease, transform 0.2s; /* Smooth hover and click animations */
+}
+
+.edbtn form button:hover {
+  background-color: #e12d24;  /* Darker red on hover */
+  transform: translateY(-2px);/* Slight lift effect on hover */
+}
+
+.edbtn form button:active {
+  background-color: #c7251b;/* Even darker red when clicked */    
+  transform: translateY(0);/* Reset lift effect */
+}

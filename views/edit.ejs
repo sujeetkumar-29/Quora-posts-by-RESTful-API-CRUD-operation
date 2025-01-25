@@ -1,138 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit your post</title>
     <link rel="stylesheet" href="/style.css">
-
 </head>
-
 <body>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            /* Light background for a clean look */
+            background-color: #f9f9f9;/* Light background for a clean look */
             margin: 0;
             padding: 20px;
         }
 
-        .edit-container {
-            max-width: 600px;
-            /* Restrict the width for better readability */
-            margin: 50px auto;
-            /* Center align with top margin */
-            padding: 20px;
-            background: #ffffff;
-            /* White background for contrast */
-            border: 1px solid #ddd;
-            /* Subtle border */
-            border-radius: 8px;
-            /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            /* Soft shadow for depth */
-        }
-
-        .edit-container h2 {
-            font-size: 1.8em;
-            /* Slightly larger heading */
-            color: #333;
-            /* Dark text for readability */
-            margin-bottom: 10px;
-        }
-
-        .edit-container p,
-        .edit-container h1 {
-            font-size: 1.2em;
-            color: #555;
-            /* Slightly lighter text */
-            margin-bottom: 15px;
-        }
-
-        .edit-container form textarea {
-            width: 100%;
-            /* Full width of the container */
-            padding: 10px;
-            /* Add spacing inside the textarea */
-            font-size: 1em;
-            /* Standard font size */
-            border: 1px solid #ddd;
-            /* Light border */
-            border-radius: 6px;
-            /* Rounded corners */
-            resize: vertical;
-            /* Allow vertical resizing only */
-            outline: none;
-            transition: border-color 0.3s, box-shadow 0.3s;
-            /* Smooth focus effect */
-        }
-
-        .edit-container form textarea:focus {
-            border-color: #007BFF;
-            /* Highlight border in blue */
-            box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
-            /* Subtle blue shadow */
-        }
-
-        .edit-container form button {
-            display: block;
-            width: 100%;
-            /* Full-width button */
-            padding: 12px;
-            /* Add vertical and horizontal spacing */
-            font-size: 1em;
-            /* Standard font size */
-            font-weight: bold;
-            /* Emphasize the button text */
-            color: #ffffff;
-            /* White text */
-            background-color: #007BFF;
-            /* Blue background */
-            border: none;
-            /* Remove border */
-            border-radius: 6px;
-            /* Rounded corners */
-            cursor: pointer;
-            /* Pointer cursor for better UX */
-            margin-top: 15px;
-            /* Spacing above the button */
-            transition: background-color 0.3s, transform 0.2s;
-            /* Smooth transitions */
-        }
-
-        .edit-container form button:hover {
-            background-color: #0056b3;
-            /* Darker blue on hover */
-            transform: translateY(-2px);
-            /* Slight lift effect */
-        }
-
-        .edit-container form button:active {
-            background-color: #004080;
-            /* Even darker blue on click */
-            transform: translateY(0);
-            /* Reset lift effect */
-        }
     </style>
     <div class="header">
-
         <h1><a href="/posts">Qoura Posts</a></h1>
-
-        <!-- <a href="/posts/new">Add post</a> -->
     </div>
     <div class="edit-container">
         <h2>Edit your Post</h2>
-        <p>Post Id:<%=post.id%>
-        </p>
-        <h1>UserName:@<%=post.username%>
-        </h1>
+        <p>Post Id:<%=post.id%></p>
+        <h1>UserName:@<%=post.username%></h1>
         <form action="/posts/<%=post.id%>?_method=PATCH" method="post">
             <textarea name="content" rows="10" cols="35"><%=post.content%></textarea>
             <button>Submit</button>
         </form>
     </div>
 </body>
-
 </html>
